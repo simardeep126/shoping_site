@@ -1,0 +1,17 @@
+*{
+    text-transform: capitalize;
+}
+.form_login{
+    width: 80vw;
+    justify-self: center;
+   
+
+    margin: 30px 0px;
+}
+.heading_login{
+    margin: 30px 0px;
+}
+.submit_login{
+    margin: auto;
+
+}
