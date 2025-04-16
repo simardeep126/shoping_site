@@ -15,6 +15,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
   $phn_number=$_POST['phnnumber'];
   $pass_word=$_POST['pass_word'];
   $confirm_pass_word=$_POST['confirm_pass_word'];
+
+  if($pass_word==$confirm_pass_word){
+    $query="INSERT INTO `accounts` ( `username`, `email`, `phn_number`, `password`) VALUES ( '$user_name', '$email_address', '$phn_number', '$pass_word');";
+    $signin_run = mysqli_query($conn, $query);
+  }
+  if(!$signin_run){
+    header("location:signup.php");
+
+  } else{
+    header("location:login.php");
+  }
 }
 
 
