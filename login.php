@@ -19,7 +19,7 @@ echo $number_row;
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username_login;
 
-        header("location:main.php");
+        header("location:shop.php");
         exit;
     }else{
       
@@ -36,6 +36,14 @@ echo $number_row;
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
+  <style>
+     body {
+  background-image: url(bgimg.png);
+  background-size: cover; 
+
+  background-repeat: no-repeat; 
+}
+  </style>
   <body>
     <br><br>
     <div class="heading_login">

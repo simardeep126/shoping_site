@@ -20,6 +20,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
    
 
     <style>
+          body {
+  background-image: url(bgimg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
         .products {
             display: flex;
             flex-wrap: wrap;

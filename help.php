@@ -19,6 +19,12 @@
         border-radius: 10px;
         padding: 10px;
     }
+    body {
+  background-image: url(bgimg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
   </style>
 
   <body>
