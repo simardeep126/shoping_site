@@ -6,6 +6,12 @@
     <title>Bootstrap Navbar Example</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+      
+
+    </style>
+
   </head>
 
   <body>
@@ -21,6 +27,9 @@
             <a class="nav-link" aria-current="page" href="./main.php">Home</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="">shop</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="./login.php">Login</a>
           </li>
           <li class="nav-item">
@@ -30,13 +39,16 @@
             <a class="nav-link" href="#">Logout</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Help</a>
+            <a class="nav-link" href="./help.php">Help</a>
           </li>
+         
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
+        <i class="fa-solid fa-circle-user"></i>
+
       </div>
     </div>
   </nav>
