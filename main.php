@@ -1,7 +1,7 @@
 
 <!-- add navbar in page -->
 <?php
-include "navbar.php";
+require"navbar.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -11,9 +11,26 @@ include "navbar.php";
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <style>
+     
+        body {
+  background-image: url(bgimg.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+
+      
       .mtt{
         margin-top: 60px;
+        
       }
+      
+      .bg-body {
+  padding: 0; /* Removes the inner spacing */
+  margin: 0;  /* Removes the outer spacing */
+}
+
   .product_categories {
     margin-top: 40px;
   display: flex;
@@ -38,7 +55,7 @@ flex-direction:row;
   <main class="container mtt">
   <div class="bg-body p-5 rounded">
     <h1 class="text-center">welcome to bumbelz</h1>
-    <p class="lead text-center">we have multiple poducts in and fresh products we can send your order ifew min go and explorw our site</p>
+    <p class="lead text-center">we have multiple poducts in and fresh products we can send your order in few min go and explorw our site</p>
    
   </div>
 </main>

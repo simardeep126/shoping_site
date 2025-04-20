@@ -2,24 +2,28 @@
 require "db_conn.php";
 require "navbar.php";
 
-
+$log_in=false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username_login = $_POST['user__name'];
     $password_login = $_POST['pass__word'];
 
-    $query_login = $conn->prepare("SELECT * FROM `accounts` WHERE username = ? AND password = ?");
-    $query_login->bind_param("ss", $username_login, $password_login);
-    $query_login->execute();
-    $login_query_run = $query_login->get_result();
-    $number = $login_query_run->num_rows;
+    $query_login = "SELECT * FROM `accounts` WHERE username='$username_login' AND password='$password_login'";
+$query_run=mysqli_query($conn,$query_login);
 
-    if($number == 1){
+
+$number_row = mysqli_num_rows($query_run);
+
+echo $number_row;
+    if($number_row == 1){
         session_start();
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username_login;
 
         header("location:main.php");
         exit;
+    }else{
+      
+      $log_in=true;
     }
 }
 ?>
@@ -37,6 +41,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="heading_login">
         <h3 class="text-center">Login Form</h3>
     </div>
+    <?php
+    if($log_in==true){
+      echo'  <div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">you are not login</h4>
+  <p>your not login successfully please check the pssword and username,use correct password and username</p>
+  <hr>
+  <p class="mb-0">try again </p>
+</div>  ';
+
+    }?>
     <div class="form_login">
       <form action="" method="POST">
         <div class="mb-3">

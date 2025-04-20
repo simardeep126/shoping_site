@@ -1,3 +1,16 @@
+<?php
+$access=false;
+$access_logout=true;
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+  $access=true;
+  $access_logout=false;
+
+
+
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +21,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-      
+      bo
 
     </style>
 
@@ -27,17 +40,27 @@
             <a class="nav-link" aria-current="page" href="./main.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="">shop</a>
+            <a class="nav-link" aria-current="page" href="./shop.php">shop</a>
           </li>
+          <?php 
+          if($access==true){echo'
           <li class="nav-item">
             <a class="nav-link" href="./login.php">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./signup.php">Signup</a>
+          </li>';}
+          if(  $access_logout==true){
+            echo'
+             <li class="nav-item">
+            <a class="nav-link" href="">cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="./logout.php">Logout</a>
           </li>
+          '
+          ;
+          }?>
           <li class="nav-item">
             <a class="nav-link" href="./help.php">Help</a>
           </li>
@@ -47,7 +70,7 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-        <i class="fa-solid fa-circle-user"></i>
+       
 
       </div>
     </div>
